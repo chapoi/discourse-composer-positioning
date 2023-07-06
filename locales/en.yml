@@ -1,0 +1,3 @@
+en:
+  theme_metadata:
+    description: "Prevents the composer from overlapping the sidebar on wide enough screens"
