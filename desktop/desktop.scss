@@ -1,24 +1,28 @@
 @media screen and (min-width: $reply-area-max-width) {
   .sidebar-wrapper .sidebar-container {
-    height: auto;
+    .has-sidebar-page & {
+      height: auto;
+    }
   }
   #reply-control {
-    width: auto;
-    max-width: calc(var(--d-max-width) - 1.5rem);
-    margin-left: 0;
-    margin-right: 0;
-    transform: translateX(
-      calc(
-        ((100vw - var(--d-max-width) - var(--d-sidebar-width)) / 2) + 17em +
-          1rem
-      )
-    );
-
-    &.hide-preview {
-      max-width: calc(740px);
+    .has-sidebar-page & {
+      width: auto;
+      max-width: calc(var(--d-max-width) - 1.5rem);
+      margin-left: 0;
+      margin-right: 0;
       transform: translateX(
-        calc(((100vw - 740px - var(--d-sidebar-width)) / 2) + 17em)
+        calc(
+          ((100vw - var(--d-max-width) - var(--d-sidebar-width)) / 2) + 17em +
+            1rem
+        )
       );
+
+      &.hide-preview {
+        max-width: calc(740px);
+        transform: translateX(
+          calc(((100vw - 740px - var(--d-sidebar-width)) / 2) + 17em)
+        );
+      }
     }
   }
 }
