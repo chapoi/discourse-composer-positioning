@@ -7,20 +7,25 @@
   #reply-control {
     .has-sidebar-page & {
       width: auto;
-      max-width: calc(var(--d-max-width) - 1.5rem);
+      max-width: calc(
+        (var(--d-max-width) + (var(--d-sidebar-width) / 2)) - 1.5rem
+      );
       margin-left: 0;
       margin-right: 0;
       transform: translateX(
         calc(
-          ((100vw - var(--d-max-width) - var(--d-sidebar-width)) / 2) + 17em +
-            1rem
+          ((100vw - var(--d-max-width) - (var(--d-sidebar-width) / 0.5)) / 2) +
+            17em + 1rem
         )
       );
 
       &.hide-preview {
         max-width: calc(740px);
         transform: translateX(
-          calc(((100vw - 740px - var(--d-sidebar-width)) / 2) + 17em)
+          calc(
+            ((100vw - 740px - var(--d-sidebar-width)) / 2) +
+              var(--d-sidebar-width)
+          )
         );
       }
     }
