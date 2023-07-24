@@ -4,7 +4,7 @@
       height: auto;
     }
   }
-  #reply-control {
+  #reply-control:not(.fullscreen) {
     .has-sidebar-page & {
       width: auto;
       max-width: calc(
